@@ -1,5 +1,5 @@
 var assert = require("assert");
-var canvasToContext = require("../");
+var imageToContext = require("../");
 var bind = require("lodash.bind");
 
 var IMAGE_URL = "test/chla_8day_2013.png";
@@ -20,26 +20,26 @@ describe("image-to-context", function() {
   }
 
   it("should load a image if a valid url is passed", function(done) {
-    canvasToContext(IMAGE_URL, bind(assertValid, undefined, done));
+    imageToContext(IMAGE_URL, bind(assertValid, undefined, done));
   });
 
   it("should load an image if a valid image element is passed", function(done) {
     var el = document.createElement("img");
     el.src = IMAGE_URL;
-    canvasToContext(el, bind(assertValid, undefined, done));
+    imageToContext(el, bind(assertValid, undefined, done));
   });
 
   it("should load an image if a valid image object is passed", function(done) {
     var obj = new Image();
     obj.src = IMAGE_URL;
-    canvasToContext(obj, bind(assertValid, undefined, done));
+    imageToContext(obj, bind(assertValid, undefined, done));
   });
 
   it("should fail to load an image if an invalid image url is passed", function(done) {
-    canvasToContext("no-image.png", bind(assertError, undefined, done));
+    imageToContext("no-image.png", bind(assertError, undefined, done));
   });
 
   it("should fail to load an image if an invalid type is passed", function(done) {
-    canvasToContext({}, bind(assertError, undefined, done));
+    imageToContext({}, bind(assertError, undefined, done));
   });
 });
