@@ -1,0 +1,34 @@
+{
+  "name": "image-to-context",
+  "version": "0.1.0",
+  "description": "Create an canvas context from an image url.",
+  "main": "./index.js",
+  "scripts": {
+    "test": "./node_modules/testling/bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:orangemug/image-to-context.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orangemug/image-to-context/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "testling": "~1.6.1"
+  },
+  "testling": {
+    "harness": "mocha-tdd",
+    "browsers": [
+      "ie/9..latest",
+      "firefox/24..latest",
+      "chrome/28..latest",
+      "opera/12.0", "opera/15..latest",
+      "iphone/6..latest",
+      "safari/5.1..latest"
+    ],
+    "harness" : "mocha",
+    "files": "./test/index.js"
+  }
+}
