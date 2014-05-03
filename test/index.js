@@ -3,7 +3,7 @@ var canvasToContext = require("../");
 
 describe("canvas-to-context", function() {
   it("should load a image if a valid url is passed", function(done) {
-    canvasToContext("/test/chla_8day_2013.png", function(err, ctx) {
+    canvasToContext("test/chla_8day_2013.png", function(err, ctx) {
       assert.equal(err, undefined);
       assert(ctx instanceof CanvasRenderingContext2D);
       assert.equal(ctx.canvas.width, 400);
