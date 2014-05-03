@@ -11,8 +11,8 @@ To install simply run
 
 ## Usage
 
-    var canvasToContext = require("canvas-to-context");
-    canvasToContext("http://exmaple.com/image.png", function(err, ctx) {
+    var imageToContext = require("image-to-context");
+    imageToContext("http://exmaple.com/image.png", function(err, ctx) {
       // Code here...
     });
 

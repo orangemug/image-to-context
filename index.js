@@ -1,4 +1,4 @@
-function canvasToContext(src, done) {
+function imageToContext(src, done) {
   var img = new Image();
   var canvas = document.createElement("canvas");
 
@@ -18,4 +18,4 @@ function canvasToContext(src, done) {
   img.src = src;
 }
 
-module.exports = canvasToContext;
+module.exports = imageToContext;
