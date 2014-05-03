@@ -13,6 +13,12 @@ describe("image-to-context", function() {
     done();
   }
 
+  function assertError(done, err, ctx) {
+    assert.ok(err);
+    assert.equal(ctx, undefined);
+    done();
+  }
+
   it("should load a image if a valid url is passed", function(done) {
     canvasToContext(IMAGE_URL, bind(assertValid, undefined, done));
   });
@@ -30,18 +36,10 @@ describe("image-to-context", function() {
   });
 
   it("should fail to load an image if an invalid image url is passed", function(done) {
-    canvasToContext("no-image.png", function(err, ctx) {
-      assert.ok(err);
-      assert.equal(ctx, undefined);
-      done();
-    });
+    canvasToContext("no-image.png", bind(assertError, undefined, done));
   });
 
   it("should fail to load an image if an invalid type is passed", function(done) {
-    canvasToContext({}, function(err, ctx) {
-      assert.ok(err);
-      assert.equal(ctx, undefined);
-      done();
-    });
+    canvasToContext({}, bind(assertError, undefined, done));
   });
 });
