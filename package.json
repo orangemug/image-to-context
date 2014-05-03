@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "mocha": "~1.18.2",
-    "testling": "~1.6.1"
+    "testling": "~1.6.1",
+    "lodash.bind": "~2.4.1"
   },
   "testling": {
     "harness": "mocha-tdd",

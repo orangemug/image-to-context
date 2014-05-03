@@ -1,5 +1,5 @@
 # image-to-context
-Create an canvas context from an image url
+Create a canvas context from an image element/object/url
 
 [![browser support](https://ci.testling.com/orangemug/image-to-context.png)](https://ci.testling.com/orangemug/image-to-context)
 
@@ -12,9 +12,9 @@ To install simply run
 ## Usage
 
     var imageToContext = require("image-to-context");
-    imageToContext("http://exmaple.com/image.png", function(err, ctx) {
-      // Code here...
-    });
+    imageToContext("/image.png", function(err, ctx) {});
+    imageToContext(imageElement, function(err, ctx) {});
+    imageToContext(imageObj, function(err, ctx) {});
 
 
 ## Test
