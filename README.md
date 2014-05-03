@@ -1,6 +1,7 @@
 # image-to-context
 Create an canvas context from an image url
 
+[![browser support](https://ci.testling.com/orangemug/image-to-context.png)](https://ci.testling.com/orangemug/image-to-context)
 
 ## Install
 To install simply run
@@ -21,7 +22,7 @@ To run the tests
 
     npm test
 
-[Image](test/chla_8day_2013.png) used in the test from <http://blog.remotesensing.io/2013/05/Dealing-with-no-data-using-NumPy-masked-array-operations>
+[Image](test/chla_8day_2013.png) used in the test from [remotesensing.io](http://blog.remotesensing.io/2013/05/Dealing-with-no-data-using-NumPy-masked-array-operations)
 
 
 ## License
